@@ -101,8 +101,7 @@ public class DelayedTrainsInfo {
 
     DelayedTrain train = mapOfAllTrains.get(line);
     long secondsPassedToday = calculateSecondsPassedToday();
-    System.out.println("seconds passed today: " + secondsPassedToday);
     return secondsPassedToday == 0 ? 1.0 :
-        1.0 - (double) (train.getAccumulatedDelayTime() / secondsPassedToday);
+        1.0 - (double) train.getAccumulatedDelayTime() / (double) secondsPassedToday;
   }
 }

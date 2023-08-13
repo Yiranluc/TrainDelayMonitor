@@ -54,7 +54,7 @@ public class DelayedTrain {
         AppConfig.isoFormatter);
     LocalDateTime currentTime = LocalDateTime.parse(createdTimeStamp, AppConfig.isoFormatter);
     this.accumulatedDelayTime += Duration.between(startTime, currentTime).getSeconds();
-    System.out.println("accumalted time for " + this.routeId + " is: " + this.accumulatedDelayTime);
+//    System.out.println("accumalted time for " + this.routeId + " is: " + this.accumulatedDelayTime);
   }
 
   public void resetAccumulatedDelayTime() {

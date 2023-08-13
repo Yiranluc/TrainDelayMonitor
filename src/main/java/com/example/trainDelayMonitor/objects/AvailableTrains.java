@@ -21,11 +21,11 @@ public enum AvailableTrains {
   N("N"),
   Q("Q"),
   R("R"),
-  S("S"),
+  GS("GS"),
   W("W"),
   Z("Z"),
   FS("FS"),
-  RS("RS"),
+  H("H"),
   SI("SI");
 
   public String line;

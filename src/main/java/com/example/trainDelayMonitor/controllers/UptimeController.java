@@ -25,8 +25,8 @@ public class UptimeController {
       return ResponseEntity.badRequest().body(AppConfig.LINE_NOT_AVAILABLE_RESPONSE);
     } else {
       double fractionofDelay = 100 * this.delayedTrainsInfo.getFractionofNotDelay(line);
-      return ResponseEntity.ok("Line " + line + " is not delayed for nearly" + fractionofDelay
-          + "% of the time up to now today.");
+      return ResponseEntity.ok("Line " + line + " is not delayed for nearly " + String.format("%.2f%%", fractionofDelay)
+          + " of the time up to now today.");
     }
 
   }
